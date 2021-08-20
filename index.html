@@ -6,9 +6,142 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- tailwind cdn -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- external css -->
+    <link rel="stylesheet" href="macstyle.css">
+
 </head>
 
 <body>
+
+    <section class="container grid grid-cols-2 mt-12">
+
+        <!-- cover photo -->
+        <div class="">
+            <img class="mx-auto" src="images/mac.png" alt="" width="70%">
+        </div>
+
+        <!-- about details -->
+        <div class="">
+
+
+            <!--product title -->
+            <h1 class="text-4xl font-semibold">
+                Customize your Blue 24-inch iMac with Apple M1 chip.
+            </h1>
+
+            <!-- product description -->
+            <p class="text-lg mt-3">The Apple M1 is an ARM-based system on a chip. It was designed by Apple Inc. as a
+                central processing unit and graphics processing unit for its Macintosh computers and iPad Pro tablets.
+                It was inspired by their Apple A14 Bionic chip.</p>
+
+
+            <!-- extra specification added button -->
+            <section class="space-y-2 my-5">
+                <div class="memory space-y-1">
+                    <h3 class="text-xl font-medium">Memory</h3>
+                    <button id="default-memory">8GB unified memory</button>
+                    <button id="16gb-memory">16GB unified memory</button>
+                </div>
+                <div class="storage space-y-1">
+                    <h3 class="text-xl font-medium">Storage</h3>
+                    <button id="default-storage">256GB SSD storage</button>
+                    <button id="512gb-ssd">512GB SSD storage</button>
+                    <button id="1tb-ssd">1TB SSD storage</button>
+                </div>
+                <div class="delivery space-y-1">
+                    <h3 class="text-xl font-medium">Choose your delivery option</h3>
+                    <button id="default-delivery">Friday, Aug 27 FREE Prime Delivery</button>
+                    <button id="argent-delivery">Friday, Aug 21 Delivery Charge $20</button>
+                </div>
+
+            </section>
+
+
+            <!-- price cart calculation -->
+            <section class="cart-item text-lg font-semibold shadow-lg p-5 border-2 ">
+
+                <div class="grid grid-cols-2 gap-0 ">
+
+                    <div class="divide-y divide-yellow-500  ">
+                        <h5>Best Price: </h5>
+
+                        <h5>Extra Memory Cost:</h5>
+
+                        <h5>Extra Storage Cost:</h5>
+
+                        <h5>Delivery Charge:</h5>
+                        <hr>
+                        <h5>Total Price:</h5>
+
+
+
+                    </div>
+
+                    <div class="divide-y divide-yellow-500">
+                        <h5>$ <span id="best-price">1,250</span></h5>
+
+                        <h5>$ <span id="extra-memory">0</span></h5>
+
+                        <h5>$ <span id="extra-storage">1,250</span></h5>
+
+                        <h5>$ <span id="delivery-charge">20</span></h5>
+                        <hr>
+
+                        <h5>$ <span id="total-price">20</span></h5>
+
+
+                    </div>
+                </div>
+
+
+                <!-- promo code appy  -->
+                <div>
+                    <h5 class="mt-3">Add Promo Code:</h5>
+                    <hr>
+
+                    <div class="grid grid-cols-4">
+                        <div class="col-span-2">
+                            <input class="w-11/12 p-1.5 text-red-700 font-bold" type="text"
+                                placeholder="Have Promo Code ?" id="">
+                        </div>
+                        <div class="col-span-1">
+                            <p class="text-red-500">$ <span id="discount-price">7272</span> </p>
+                        </div>
+                        <div class="col-span-1.5"><button
+                                class="bg-red-700 text-white px-3 py-1.5 rounded ">Apply</button>
+                        </div>
+
+                    </div>
+
+                    <hr>
+                </div>
+
+            </section>
+
+        </div>
+
+    </section>
+
+
+    <!-- final price calculation  -->
+    <section class="container mx-auto mt-8">
+        <hr>
+        <p class="text-center text-4xl font-bold">Total: $ 1000</p>
+    </section>
+
+    <!-- footer section -->
+    <footer class="mt-5">
+        <h3 class="text-center">&copy; 2021 All right served by Apple. </h3>
+    </footer>
+
+
+
+    <!--java-script file -->
+    <script src="js/macbook.js"></script>
 
 </body>
 
