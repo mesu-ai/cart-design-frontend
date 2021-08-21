@@ -130,35 +130,42 @@ function totalPrice() {
 }
 
 
-
+// apply promo code
 document.getElementById('apply-button').addEventListener('click', function () {
 
-    const totalValue = parseFloat(totalPrice());
-    const discountPrice = document.getElementById('discount-price');
+    // const totalValue = parseFloat(totalPrice());
+    // const discount = parseFloat(discountAmount());
 
+    const price = totalPrice() - discountAmount();
+    finalPrice.innerText = price;
+
+
+});
+
+
+// calculate discount
+function discountAmount() {
+    const totalValue = parseFloat(totalPrice());
+
+    const discountPrice = document.getElementById('discount-price');
     const promocode = document.getElementById('promocode-input').value;
 
-    // check promo code
+    // check promo code and apply
     if (promocode == 'stevekaku') {
-
         const discount = (totalValue * .20);
+        discountPrice.innerText = '$ ' + discount;
 
-        discountPrice.innerText = discount;
-
-        const price = totalValue - discount;
-
-        finalPrice.innerText = price;
-
-
-        console.log(discount);
-
-
-
+        return discount;
+    }
+    else {
+        return 0;
     }
 
 
 
-});
+
+
+}
 
 
 
