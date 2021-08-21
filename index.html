@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body class="bg-gray-200">
 
     <section class="container grid grid-cols-2 mt-12">
 
@@ -63,11 +63,12 @@
 
 
             <!-- price cart calculation -->
-            <section class="cart-item text-lg font-semibold shadow-lg p-5 border-2 ">
+            <section id="price-cart" style="background-color: #e0e7ff;"
+                class="cart-item text-lg font-semibold shadow-md p-5 border-2 bg-white  rounded-2xl border-double ">
 
-                <div class="grid grid-cols-2 gap-0 ">
+                <div class="grid grid-cols-2 gap-0 shadow-lg p-3 bg-white ring-4 rounded-2xl ">
 
-                    <div class="divide-y divide-yellow-500  ">
+                    <div class="divide-y divide-purple-800 ">
                         <h5>Best Price: </h5>
 
                         <h5>Extra Memory Cost:</h5>
@@ -82,7 +83,7 @@
 
                     </div>
 
-                    <div class="divide-y divide-yellow-500">
+                    <div class="divide-y divide-purple-800">
                         <h5>$ <span id="best-price">1299</span></h5>
 
                         <h5>$ <span id="extra-memory">0</span></h5>
@@ -104,25 +105,26 @@
                     <h5 id="promo-apply" class="mt-3 promo-used shadow-sm">Promocode Applied !
                     </h5>
                     <h5 id="promo-empty" class="mt-3">Add Promo Code:</h5>
-                    <hr>
+                    <hr class="border-blue-700">
 
                     <div class="grid grid-cols-4">
                         <div class="col-span-2">
-                            <input class="w-11/12 p-1.5 text-red-700 font-bold" type="text"
-                                placeholder="Have Promo Code ?" id="promocode-input">
+                            <input
+                                class="w-11/12 p-1.5 text-red-700 font-bold rounded-2xl border-gray-300 bg-white placeholder-gray-500"
+                                type="text" placeholder="Have Promo Code ?" id="promocode-input">
                         </div>
 
 
                         <div class="col-span-1">
-                            <p class="text-red-500"> <span id="discount-price"></span> </p>
+                            <p class="text-red-700 font-bold"> <span id="discount-price"></span> </p>
                         </div>
                         <div class="col-span-1"><button id="apply-button"
-                                class="bg-red-700 text-white px-3 py-1.5 rounded ">Apply</button>
+                                class="bg-red-700 text-white px-3 py-1.5 rounded ring-4 ring-red hover:bg-black">Apply</button>
                         </div>
 
                     </div>
 
-                    <hr>
+                    <hr class="border-blue-700">
                 </div>
 
             </section>
@@ -134,7 +136,8 @@
 
     <!-- final price calculation  -->
     <section class="container mx-auto mt-10">
-        <hr>
+        <hr class="border-indigo-700 border-1">
+
         <p class="text-center text-4xl font-bold mt-5">Total: $ <span id="final-price">0</span></p>
     </section>
 

@@ -178,6 +178,15 @@ function discountAmount() {
 
 }
 
+document.getElementById('promocode-input').addEventListener('focus', function () {
+    document.getElementById('price-cart').style.backgroundColor = '#e8cdfa';
+
+});
+document.getElementById('promocode-input').addEventListener('blur', function () {
+    document.getElementById('price-cart').style.backgroundColor = '#c3d4bc';
+
+});
+
 
 
 
