@@ -6,10 +6,11 @@ const storagePriceText = document.getElementById('extra-storage');
 const deliveryPriceText = document.getElementById('delivery-charge');
 
 const totalPriceText = document.getElementById('total-price');
+const finalPrice = document.getElementById('final-price');
 
 
-const totalAmount = totalPrice();
-console.log(totalAmount);
+totalPrice();
+//console.log(totalAmount);
 
 
 // memory price calculation
@@ -114,15 +115,52 @@ function totalPrice() {
     const deliveryPrice = parseFloat(deliveryPriceText.innerText);
 
 
-
+    // calculate total 
     const totalAmount = basePrice + memoryPrice + storagePrice + deliveryPrice;
+
+    // update total price
     totalPriceText.innerText = totalAmount;
 
-    console.log(totalAmount);
+    // update final price
+    finalPrice.innerText = totalAmount;
+
+
     return totalAmount;
 
-
 }
+
+
+
+document.getElementById('apply-button').addEventListener('click', function () {
+
+    const totalValue = parseFloat(totalPrice());
+    const discountPrice = document.getElementById('discount-price');
+
+    const promocode = document.getElementById('promocode-input').value;
+
+    // check promo code
+    if (promocode == 'stevekaku') {
+
+        const discount = (totalValue * .20);
+
+        discountPrice.innerText = discount;
+
+        const price = totalValue - discount;
+
+        finalPrice.innerText = price;
+
+
+        console.log(discount);
+
+
+
+    }
+
+
+
+});
+
+
 
 
 

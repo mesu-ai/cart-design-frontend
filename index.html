@@ -91,7 +91,7 @@
                         <h5>$ <span id="delivery-charge">0</span></h5>
                         <hr>
 
-                        <h5>$ <span id="total-price">1299</span></h5>
+                        <h5>$ <span id="total-price">0</span></h5>
 
 
                     </div>
@@ -106,12 +106,16 @@
                     <div class="grid grid-cols-4">
                         <div class="col-span-2">
                             <input class="w-11/12 p-1.5 text-red-700 font-bold" type="text"
-                                placeholder="Have Promo Code ?" id="">
+                                placeholder="Have Promo Code ?" id="promocode-input">
                         </div>
+                        <!-- <div class="col-span-1">
+                            <p id="discount" class="text-red-500">Discount:</p>
+                        </div> -->
+
                         <div class="col-span-1">
-                            <p class="text-red-500">$ <span id="discount-price">7272</span> </p>
+                            <p class="text-red-500">$ <span id="discount-price">0.0</span> </p>
                         </div>
-                        <div class="col-span-1.5"><button
+                        <div class="col-span-1"><button id="apply-button"
                                 class="bg-red-700 text-white px-3 py-1.5 rounded ">Apply</button>
                         </div>
 
@@ -130,7 +134,7 @@
     <!-- final price calculation  -->
     <section class="container mx-auto mt-8">
         <hr>
-        <p class="text-center text-4xl font-bold">Total: $ 1000</p>
+        <p class="text-center text-4xl font-bold">Total: $ <span id="final-price">0</span></p>
     </section>
 
     <!-- footer section -->
