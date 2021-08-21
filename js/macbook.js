@@ -5,6 +5,13 @@ const memoryPriceText = document.getElementById('extra-memory');
 const storagePriceText = document.getElementById('extra-storage');
 const deliveryPriceText = document.getElementById('delivery-charge');
 
+const usedPromo = document.getElementById('promo-apply');
+const addPromo = document.getElementById('promo-empty');
+
+
+const inputCode = document.getElementById('promocode-input');
+const discountPrice = document.getElementById('discount-price');
+
 const totalPriceText = document.getElementById('total-price');
 const finalPrice = document.getElementById('final-price');
 
@@ -123,7 +130,6 @@ function totalPrice() {
     // update final price
     finalPrice.innerText = totalAmount;
 
-
     return totalAmount;
 
 }
@@ -132,49 +138,45 @@ function totalPrice() {
 // apply promo code
 document.getElementById('apply-button').addEventListener('click', function () {
 
-    // const totalValue = parseFloat(totalPrice());
-    // const discount = parseFloat(discountAmount());
 
-    const price = totalPrice() - discountAmount();
-    finalPrice.innerText = price;
+    const inputValue = inputCode.value;
 
+    if (inputValue == 'stevekaku') {
+        discountAmount();
+
+    }
+    else {
+
+        console.log('bye');
+        addPromo.style.display = 'block';
+        usedPromo.style.display = 'none';
+        inputCode.value = '';
+        discountPrice.innerText = '';
+    }
 
 });
 
 
-// calculate discount
+// calculate discount and update final price
+
 function discountAmount() {
-    const totalValue = parseFloat(totalPrice());
 
-    const discountPrice = document.getElementById('discount-price');
-    const promocode = document.getElementById('promocode-input');
-    const getPromoCode = promocode.value;
-
-    const usedPromo = document.getElementById('promo-apply');
-    const addPromo = document.getElementById('promo-empty');
+    addPromo.style.display = 'none';
+    usedPromo.style.display = 'inline-block';
 
 
-    // check promo code and apply
-    if (getPromoCode == 'stevekaku') {
+    const discount = (totalPrice() * .2);
+    const finalPrice = (totalPrice() - discount);
 
-        promocode.value = '';
-
-        addPromo.style.display = 'none';
-        usedPromo.style.display = 'inline-block';
-
-        const discount = (totalValue * .20);
-        discountPrice.innerText = '-$' + discount;
-        return discount;
-    }
-    else {
+    // discount update
+    discountPrice.innerText = '-$' + discount;
 
 
-        addPromo.style.display = 'block';
-        usedPromo.style.display = 'none';
+    const price = document.getElementById('final-price');
+    price.innerText = finalPrice;
 
-        discountPrice.innerText = '';
-        return 0;
-    }
+
+    inputCode.value = '';
 
 }
 
