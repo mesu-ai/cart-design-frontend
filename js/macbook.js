@@ -164,7 +164,7 @@ function discountAmount() {
         usedPromo.style.display = 'inline-block';
 
         const discount = (totalValue * .20);
-        discountPrice.innerText = '- $' + discount;
+        discountPrice.innerText = '-$' + discount;
         return discount;
     }
     else {
