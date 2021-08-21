@@ -151,36 +151,35 @@ function discountAmount() {
     const promocode = document.getElementById('promocode-input');
     const getPromoCode = promocode.value;
 
+    const usedPromo = document.getElementById('promo-apply');
+    const addPromo = document.getElementById('promo-empty');
+
+
     // check promo code and apply
     if (getPromoCode == 'stevekaku') {
 
-        statusUpdate()
+        promocode.value = '';
+
+        addPromo.style.display = 'none';
+        usedPromo.style.display = 'inline-block';
 
         const discount = (totalValue * .20);
         discountPrice.innerText = '- $' + discount;
-
-
         return discount;
     }
     else {
+
+
+        addPromo.style.display = 'block';
+        usedPromo.style.display = 'none';
+
         discountPrice.innerText = '';
         return 0;
     }
 
 }
 
-function statusUpdate() {
-    const status = document.getElementById('promo-status');
-    status.innerText = 'Promocode Applied !';
-    status.style.backgroundColor = 'red';
-    status.style.padding = '5px';
-    status.style.display = 'inline';
-    status.style.fontSize = '11px';
-    status.style.fontStyle = 'italic';
-    status.style.color = 'white';
 
-
-}
 
 
 

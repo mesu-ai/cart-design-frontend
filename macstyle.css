@@ -1,4 +1,4 @@
-/* utility design */
+/* utility  design */
 .memory button, .storage button, .delivery button {
     background-color: rgb(219, 219, 211);
     border-radius: 10px;
@@ -7,11 +7,25 @@
 
     
 }
+
 .memory button:hover, .storage button:hover, .delivery button:hover {
     background-color: rgb(0, 3, 3);
     border-radius: 10px;
     padding: 10px 15px;
     font-weight: 400;
     color: white;
+
+}
+
+
+/* promocode tittle design */
+.promo-used{
+    background-color: rgba(255, 0, 0, 0.925);
+    padding:2px 7px;
+    display: none;
+    font-size: 11px;
+    font-style: italic;
+    color: white;
+    border-radius:5px;
 
 }
