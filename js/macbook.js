@@ -146,12 +146,12 @@ document.getElementById('apply-button').addEventListener('click', function () {
 
     }
     else {
-
-        console.log('bye');
+        alert('Insert Valid Promo Code !')
         addPromo.style.display = 'block';
         usedPromo.style.display = 'none';
         inputCode.value = '';
         discountPrice.innerText = '';
+        alert('Insert Valid Promo Code !')
     }
 
 });
