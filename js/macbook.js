@@ -10,7 +10,6 @@ const finalPrice = document.getElementById('final-price');
 
 
 totalPrice();
-//console.log(totalAmount);
 
 
 // memory price calculation
